@@ -1,16 +1,8 @@
-import json
-import smtplib
-import ssl
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from msilib.schema import Environment
 
-import psycopg2
-import select
-from Tools.scripts.make_ctype import method
+import ssl
+
 from flask import Flask, render_template, request, make_response, redirect, jsonify
-from jinja2 import FileSystemLoader
-from sshtunnel import SSHTunnelForwarder
+
 
 from ddbb import get_db_connection
 
