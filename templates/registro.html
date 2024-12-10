@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Declara el tipo de documento HTML5 -->
+<html lang="es"> <!-- Define el idioma de la página como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <title>Login</title> <!-- Título que aparecerá en la pestaña del navegador -->
+</head>
+<body>
+<!-- Formulario que enviará los datos al servidor usando el método POST -->
+<form action="/register" method="POST">
+
+    <h1>Registrarse</h1>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="passwd" required> <!-- Campo de contraseña, requerido -->
+    <br>
+
+    <label for="telefono">Telefono:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+    <br>
+
+    <label for="direccion">Dreccion:</label>
+    <input type="text" id="direccion" name="direccion" required>
+    <br>
+
+
+    <br>
+    <button type="submit">Registrar</button>
+
+
+</form>
+
+<!-- Botón para ir a registrar -->
+
+</body>
+</html>
