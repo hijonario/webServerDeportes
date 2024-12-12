@@ -18,30 +18,30 @@ tunnel = None
 ########################################################################################################################
 ########################################################################################################################
 
-@app.route('/read_qr')
-def read_qr():
-    return render_template('read_qr.html')
-
-@app.route('/qr_ok')
-def qr_ok():
-    return render_template('qr_ok.html')
-
-@app.route('/qr_fail')
-def qr_fail():
-    return render_template('qr_fail.html')
-
-
-@app.route('/qr-data', methods=['POST'])
-def qr_data():
-    if request.is_json:
-        qr_content = request.json.get('qr_data')
-        print("Contenido del QR:", qr_content)
-
-        # Responder con JSON indicando éxito y redirigir en el cliente
-        return jsonify({"message": "QR recibido", "content": "qr_fail"})
-
-    else:
-        return jsonify({"error": "No se recibió JSON válido"}), 400
+# @app.route('/read_qr')
+# def read_qr():
+#     return render_template('read_qr.html')
+#
+# @app.route('/qr_ok')
+# def qr_ok():
+#     return render_template('qr_ok.html')
+#
+# @app.route('/qr_fail')
+# def qr_fail():
+#     return render_template('qr_fail.html')
+#
+#
+# @app.route('/qr-data', methods=['POST'])
+# def qr_data():
+#     if request.is_json:
+#         qr_content = request.json.get('qr_data')
+#         print("Contenido del QR:", qr_content)
+#
+#         # Responder con JSON indicando éxito y redirigir en el cliente
+#         return jsonify({"message": "QR recibido", "content": "qr_fail"})
+#
+#     else:
+#         return jsonify({"error": "No se recibió JSON válido"}), 400
 
 ########################################################################################################################
 ########################################################################################################################
