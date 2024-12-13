@@ -1,29 +1,104 @@
-<!DOCTYPE html> <!-- Declara el tipo de documento HTML5 -->
-<html lang="es"> <!-- Define el idioma de la página como español -->
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
-    <title>Login</title> <!-- Título que aparecerá en la pestaña del navegador -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hacer que sea responsivo -->
+    <title>Login</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .register-btn {
+            background-color: #28a745;
+            margin-top: 10px;
+        }
+
+        .register-btn:hover {
+            background-color: #218838;
+        }
+
+        .footer-link {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .footer-link a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-<!-- Formulario que enviará los datos al servidor usando el método POST -->
-<form action="/sign_in" method="POST">
-    <!-- Campo para ingresar el correo o nombre de usuario -->
-    <label for="email">Correo / Usuario:</label>
-    <input type="text" id="email" name="login" required> <!-- Campo de texto, requerido -->
-    <br> <!-- Salto de línea -->
+    <form action="/sign_in" method="POST">
+        <h2>Iniciar Sesión</h2> <!-- Título del formulario -->
+        <label for="email">Correo / Usuario:</label>
+        <input type="text" id="email" name="login" placeholder="Ingresa tu correo o usuario" required>
 
-    <!-- Campo para ingresar la contraseña -->
-    <label for="password">Contraseña:</label>
-    <input type="password" id="password" name="passwd" required> <!-- Campo de contraseña, requerido -->
-    <br> <!-- Salto de línea -->
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="passwd" placeholder="Ingresa tu contraseña" required>
 
-    <!-- Botón para enviar el formulario -->
-    <button type="submit">Aceptar</button>
+        <button type="submit">Aceptar</button>
 
-</form>
-
-    <a href="/registrar">
-    <button>Registrar</button>
-    </a>
+        <a href="/registrar">
+            <button type="button" class="register-btn">Registrar</button>
+        </a>
+    </form>
 </body>
 </html>
